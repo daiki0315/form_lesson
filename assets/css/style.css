@@ -82,7 +82,8 @@ input__init {
   box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
 }
 
-.radio__input, check__input {
+.radio__input, 
+.course input {
   display: none;
 }
 
@@ -217,19 +218,17 @@ input__init {
   left: 0;
 }
 
-.gender__input:checked + span::after {
+.radio__input:checked + span::after {
   content: '';
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background-color: #01bfbd;
+  background-color: #00ccff;
   transform: translateY(-50%);
   position: absolute;
   top: 50%;
   left: 4px;
 }
-
-radio__input
 
 
 /*form origin*/
