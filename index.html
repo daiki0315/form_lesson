@@ -38,14 +38,14 @@
                   名字
                   <span class="alert">※</span>
                 </p>
-                <input type="text" name="name" class="input__init input__area">
+                <input type="text" name="first-name" class="input__init input__area" required>
               </div>
               <div class="name__box halfwidth">
                 <p class="label__text">
                   名前
                   <span class="alert">※</span>
                 </p>
-                <input type="text" name="name" class="input__init input__area">
+                <input type="text" name="last-name" class="input__init input__area" required>
               </div>
             </div>
             
@@ -56,12 +56,12 @@
                   <input type="radio" name="gender" value="male" class="radio__input">
                   <span>男性</span>
                 </label>
-                <label class="gender__radio" for="female">
-                  <input type="radio" name="gender" value="female" class="radio__input" id="female">
+                <label class="gender__radio">
+                  <input type="radio" name="gender" value="female" class="radio__input">
                   <span>女性</span>
                 </label>
-                <label class="gender__radio" for="other">
-                  <input type="radio" name="gender" value="other" class="radio__input" id="other">
+                <label class="gender__radio">
+                  <input type="radio" name="gender" value="other" class="radio__input">
                   <span>その他</span>
                 </label>
               </div>
@@ -84,7 +84,7 @@
                 Eメール
                 <span class="alert">※</span>
               </p>
-              <input type="email" class="inpput__init input__area fullwidth" name="email" placeholder="ex)hoge@example.com">
+              <input type="email" class="inpput__init input__area fullwidth" name="email" placeholder="ex)hoge@example.com" required>
             </div>
             
             <div class="row tel">
@@ -112,18 +112,18 @@
             
             <div class="row course">
               <p class="label__text">希望コース</p>
-              <label class="course__check" for="frontend">
+              <div class="course__check" for="frontend">
                 <input type="checkbox" name="course" value="frontend" id="frontend">
-                <p class="course__text">フロントエンド</p>
-              </label>
-              <label class="course__check" for="backend">
+                <label for="frontend" class="course__text">フロントエンド</label>
+              </div>
+              <div class="course__check" for="backend">
                 <input type="checkbox" name="course" value="backend" id="backend">
-                <p class="course__text">バックエンド</p>
-              </label>
-              <label class="course__check" for="app">
+                <label for="backend" class="course__text">バックエンド</label>
+              </div>
+              <div class="course__check" for="app">
                 <input type="checkbox" name="course" value="backend" id="app">
-                <p class="course__text">アプリ</p>
-              </label>
+                <label for="app" class="course__text">アプリ</label>
+              </div>
             </div>
             
             <div class="row remarks">
