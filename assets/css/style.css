@@ -32,12 +32,23 @@
   margin-bottom: 20px;
 }
 
+.label__text {
+  display: block;
+  font-size: 12px;
+  color: #545658;
+  margin-bottom: 5px;
+}
+
 .alert {
   color: #dd4b39;
 }
 
-.none input {
-  display: none;
+.link-color {
+  color: #01a6a4;
+}
+
+.link-color:hover {
+  color: #01bfbd;
 }
 
 /*インプット*/
@@ -71,6 +82,9 @@ input__init {
   box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
 }
 
+.radio__input, check__input {
+  display: none;
+}
 
 /*title*/
 .title {
@@ -168,50 +182,54 @@ input__init {
   margin-right: 15px;
 }
 
-.label__text {
-  display: block;
-  font-size: 12px;
-  color: #545658;
-  margin-bottom: 5px;
-}
-
 
 /*form gender*/
-.gender__radio {
+.gender__content {
   font-size: 16px;
-  display: inline-block;
+  display: flex;
 }
 
-.gender__title {
-  position: relative;
-  display: inline-block;
+.gender__radio {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.gender__radio:first-child {
+  margin-left: 0;
+}
+
+.gender__radio span {
   padding: 3px 3px 3px 20px;
+  display: inline-block;
+  position: relative;
 }
 
-.gender__title:before {
+.gender__radio span::before {
   content: '';
   height: 14px;
   width: 14px;
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
   border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
   transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
-.gender-input:checked + span::after {
+.gender__input:checked + span::after {
   content: '';
   height: 8px;
   width: 8px;
-  background-color: #01bfbd;
   border-radius: 50%;
-  position: absolute;
-  left: 4px;
-  top: 50%;
+  background-color: #01bfbd;
   transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 4px;
 }
+
+radio__input
 
 
 /*form origin*/
@@ -246,7 +264,7 @@ input__init {
   color: #545658;
 }
 
-.course-check:last-child {
+.course__check:last-child {
   margin-bottom: 0;
 }
 
@@ -255,7 +273,7 @@ input__init {
   position: relative;
 }
 
-.course__text:before {
+.course__text::before {
   content: '';
   width: 15px;
   height: 15px;
@@ -266,7 +284,7 @@ input__init {
   top: 50%;
 }
 
-.course-check input:checked + .course__text:after {
+.course__check input:checked + .course__text::after {
   content: '';
   height: 16px;
   width: 8px;
@@ -283,6 +301,7 @@ input__init {
 /*form remarks*/
 .remarks .input__area {
   height: 100px;
+  resize: none;
 }
 
 
@@ -310,13 +329,6 @@ input__init {
   line-height: 16px;
 }
 
-.link-color {
-  color: #01a6a4;
-}
-
-.link-color:hover {
-  color: #01bfbd;
-}
 
 /*footer*/
 .footer {
